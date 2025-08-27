@@ -67,7 +67,18 @@ public class HonorRoll {
      */
     public static String awardQualifier(double gpa, int tardies, int detentions) {
         // Insert your code below
+        if (gpa >= 3.5 && detentions == 0) {
+            if (tardies < 3){
+                return "Honor Roll";
+            }
+            else {
+                return "Merit List";
+            }
+        } 
+        else if (gpa >= 2.5 && gpa < 3.5 && detentions < 2){
+            return "Merit List";
+        }
 
-        return "";
+        return "No List";
     }
 }
